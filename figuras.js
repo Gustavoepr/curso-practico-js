@@ -59,19 +59,41 @@ function CalcularPerimetroTriangulo(){
     const input3 = document.getElementById("Base");
     const value3 = Number(input3.value);
 
-    var perimetro = perimetriangulo(value1, value2, value3);
+    if (value1 === value2 && value1 != value3){
+        var perIsosceles = (2 * value1) + value3
+        alert("Es un triangulo isosceles")
+        alert(perIsosceles)
+    } else{
+        alert("No es un triangulo isosceles");
+        var perimetro = perimetriangulo(value1, value2, value3);
     alert(perimetro)
+    }   
 }
 
 function CalcularAreaTriangulo(){
-    const input1 =document.getElementById("Base-Area");
+    const input1 = document.getElementById("Lado-1");
     const value1 = Number(input1.value);
 
-    const input2 = document.getElementById("Altura");
-    const value2 = Number(input2.value)
+    const input2 = document.getElementById("Lado-2");
+    const value2 = Number(input2.value);
 
-    var arTriangulo = areatiangulo(value1, value2);
-    alert(arTriangulo)
+    const input3 = document.getElementById("Base");
+    const value3 = Number(input3.value);
+
+    if (value1 === value2 && value1 != value3){
+        alert("Es un triangulo isosceles")
+        const h = (value3 / 2)**2;
+        const cateto = (value1)**2
+        const height = Math.sqrt(Number(cateto) - Number(h));
+        alert(height)
+    } else{
+        alert("No es un triangulo isosceles");
+        //var perimetro = perimetriangulo(value1, value2, value3);
+    //alert(perimetro)
+    }   
+
+    //var arTriangulo = areatiangulo(value1, value2);
+    //alert(arTriangulo)
 }
 
 function CalcularPerimetroCirculo(){
@@ -89,3 +111,4 @@ function CalcularAreaCiculo(){
     var arCirculo = areaciculo(value);
     alert(arCirculo);
 }
+
