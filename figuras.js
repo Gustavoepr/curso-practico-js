@@ -1,5 +1,5 @@
 //cuadrado
-console.group();
+console.group("cuadrado");
 function perimetrocuadrado(ladocuadrado){
     return ladocuadrado * 4
 }
@@ -8,7 +8,7 @@ function areacuadrado(ladocuadrado){
 }
 console.groupEnd();
 //tiangulo
-console.group();
+console.group("triangulo");
 function perimetriangulo(lado1, lado2, base){
     return pertriangulo = lado1 + lado2 + base;
 }
@@ -18,7 +18,7 @@ function areatiangulo(base, altura){
 console.groupEnd();
 
 //circulo
-console.group();
+console.group("circulo");
 const PI = Math.PI;
 function diametro(radio){
     return radio * 2;
